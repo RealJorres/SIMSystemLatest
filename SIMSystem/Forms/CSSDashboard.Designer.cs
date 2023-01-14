@@ -47,6 +47,7 @@
             this.timer = new System.Windows.Forms.Timer(this.components);
             this.panel_cssBody = new System.Windows.Forms.Panel();
             this.timer_ris_watcher = new System.Windows.Forms.Timer(this.components);
+            this.btn_generateReport = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panelHeader.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -109,6 +110,7 @@
             // panel4
             // 
             this.panel4.BackColor = System.Drawing.SystemColors.HotTrack;
+            this.panel4.Controls.Add(this.btn_generateReport);
             this.panel4.Controls.Add(this.panel5);
             this.panel4.Controls.Add(this.panel2);
             this.panel4.Controls.Add(this.panel1);
@@ -233,6 +235,21 @@
             // 
             this.timer_ris_watcher.Tick += new System.EventHandler(this.timer_ris_watcher_Tick);
             // 
+            // btn_generateReport
+            // 
+            this.btn_generateReport.BackColor = System.Drawing.SystemColors.Highlight;
+            this.btn_generateReport.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_generateReport.FlatAppearance.BorderSize = 0;
+            this.btn_generateReport.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_generateReport.Font = new System.Drawing.Font("Heebo", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btn_generateReport.ForeColor = System.Drawing.Color.White;
+            this.btn_generateReport.Location = new System.Drawing.Point(35, 507);
+            this.btn_generateReport.Name = "btn_generateReport";
+            this.btn_generateReport.Size = new System.Drawing.Size(198, 24);
+            this.btn_generateReport.TabIndex = 14;
+            this.btn_generateReport.Text = "Create Announcement";
+            this.btn_generateReport.UseVisualStyleBackColor = false;
+            // 
             // CSSDashboard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 22F);
@@ -281,5 +298,6 @@
         private System.Windows.Forms.Timer timer;
         private Panel panel_cssBody;
         private System.Windows.Forms.Timer timer_ris_watcher;
+        private Button btn_generateReport;
     }
 }
