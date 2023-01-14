@@ -61,6 +61,11 @@ namespace SIMSystem.Forms
         private void DisplayLatestAnnouncement()
         {
             Announcement ann = announcements.OrderByDescending(x => x.CreatedDate).ToList()[0];
+            NoticeCard noticeCard = new NoticeCard(ann);
+            noticeCard.Dock = DockStyle.Fill;
+            panel_announcementBody.Controls.Add(noticeCard);
+            noticeCard.Show();
+
         }
 
         private void GetAllAnnouncement()

@@ -166,6 +166,7 @@
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "NoticeCard";
             this.Size = new System.Drawing.Size(502, 388);
+            this.Load += new System.EventHandler(this.NoticeCard_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
