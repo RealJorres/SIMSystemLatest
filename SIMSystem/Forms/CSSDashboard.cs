@@ -215,5 +215,11 @@ namespace SIMSystem.Forms
             }
             return count;
         }
+
+        private void btn_createNotice_Click(object sender, EventArgs e)
+        {
+            NoticeCreator noticeCreator = new NoticeCreator();
+            noticeCreator.ShowDialog();
+        }
     }
 }

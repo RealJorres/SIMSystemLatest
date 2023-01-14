@@ -37,6 +37,7 @@
             this.panel_usersOnlineStatus = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
+            this.btn_createNotice = new System.Windows.Forms.Button();
             this.panel5 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.btn_bulletin = new System.Windows.Forms.Button();
@@ -48,7 +49,6 @@
             this.label2 = new System.Windows.Forms.Label();
             this.timer = new System.Windows.Forms.Timer(this.components);
             this.timer_ris_watcher = new System.Windows.Forms.Timer(this.components);
-            this.btn_generateReport = new System.Windows.Forms.Button();
             this.panelHeader.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel3.SuspendLayout();
@@ -119,7 +119,7 @@
             // panel4
             // 
             this.panel4.BackColor = System.Drawing.SystemColors.HotTrack;
-            this.panel4.Controls.Add(this.btn_generateReport);
+            this.panel4.Controls.Add(this.btn_createNotice);
             this.panel4.Controls.Add(this.panel5);
             this.panel4.Controls.Add(this.panel2);
             this.panel4.Controls.Add(this.panel1);
@@ -131,6 +131,22 @@
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(236, 536);
             this.panel4.TabIndex = 5;
+            // 
+            // btn_createNotice
+            // 
+            this.btn_createNotice.BackColor = System.Drawing.SystemColors.Highlight;
+            this.btn_createNotice.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_createNotice.FlatAppearance.BorderSize = 0;
+            this.btn_createNotice.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_createNotice.Font = new System.Drawing.Font("Heebo", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btn_createNotice.ForeColor = System.Drawing.Color.White;
+            this.btn_createNotice.Location = new System.Drawing.Point(35, 507);
+            this.btn_createNotice.Name = "btn_createNotice";
+            this.btn_createNotice.Size = new System.Drawing.Size(198, 24);
+            this.btn_createNotice.TabIndex = 13;
+            this.btn_createNotice.Text = "Create Announcement";
+            this.btn_createNotice.UseVisualStyleBackColor = false;
+            this.btn_createNotice.Click += new System.EventHandler(this.btn_createNotice_Click);
             // 
             // panel5
             // 
@@ -253,21 +269,6 @@
             // 
             this.timer_ris_watcher.Tick += new System.EventHandler(this.timer_ris_watcher_Tick);
             // 
-            // btn_generateReport
-            // 
-            this.btn_generateReport.BackColor = System.Drawing.SystemColors.Highlight;
-            this.btn_generateReport.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn_generateReport.FlatAppearance.BorderSize = 0;
-            this.btn_generateReport.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_generateReport.Font = new System.Drawing.Font("Heebo", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.btn_generateReport.ForeColor = System.Drawing.Color.White;
-            this.btn_generateReport.Location = new System.Drawing.Point(35, 507);
-            this.btn_generateReport.Name = "btn_generateReport";
-            this.btn_generateReport.Size = new System.Drawing.Size(198, 24);
-            this.btn_generateReport.TabIndex = 13;
-            this.btn_generateReport.Text = "Create Announcement";
-            this.btn_generateReport.UseVisualStyleBackColor = false;
-            // 
             // SODashboard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 22F);
@@ -319,6 +320,6 @@
         private System.Windows.Forms.Timer timer;
         private Panel panel5;
         private System.Windows.Forms.Timer timer_ris_watcher;
-        private Button btn_generateReport;
+        private Button btn_createNotice;
     }
 }
