@@ -72,7 +72,7 @@ namespace SIMSystem.Forms
                         if(saveImage.ExecuteNonQuery() > 0)
                         {
                             user.ProfileImage = ConvertSignature.toBinaryArray(pb_profileImage.Image, ImageFormat.Png);
-                            MessageBox.Show("New profile picture saved.");
+                            MessageBox.Show("New profile picture saved.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
                             button1.Text = "Edit Picture";
                         }
                     }

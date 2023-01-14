@@ -42,13 +42,30 @@ namespace SIMSystem.Forms
         private void DefaultDashboard_Load(object sender, EventArgs e)
         {
             panelHeader.BackColor = Color.FromArgb(0x11, 0x46, 0x8f);
-
+            pictureBox2.BackColor = Color.FromArgb(0x11, 0x46, 0x8f);
             GetAllAnnouncement();
+            DisplayIFrame();
+        }
 
+        private void DisplayIFrame()
+        {
+            WebBrowser webBrowser = new WebBrowser();
+
+            webBrowser.Navigate("https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Fpsa.marinduque&tabs=timeline&width=340&height=500&small_header=true&adapt_container_width=true&hide_cover=true&show_facepile=false&appId");
+            webBrowser.ScriptErrorsSuppressed = true;
+            webBrowser.Dock = DockStyle.Fill;
+            panel_iFrame.Controls.Add(webBrowser);
+            webBrowser.Show();
+        }
+
+        private void DisplayLatestAnnouncement()
+        {
+            Announcement ann = announcements.OrderByDescending(x => x.CreatedDate).ToList()[0];
         }
 
         private void GetAllAnnouncement()
         {
+            announcements.Clear();
             ConnectionDB connection = new ConnectionDB();
 
             if (connection.Open())
@@ -69,9 +86,11 @@ namespace SIMSystem.Forms
                             announcement.When = DateTime.Parse(reader["ann_when"].ToString());
                             announcement.Where = reader["ann_where"].ToString();
                             announcement.CreatedBy = reader["emp_id"].ToString();
+                            announcement.CreatedDate = DateTime.Parse(reader["ann_createdAt"].ToString());
                             announcements.Add(announcement);
-
                         }
+
+                        DisplayLatestAnnouncement();
                     }
                     else
                     {

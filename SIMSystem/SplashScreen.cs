@@ -149,6 +149,7 @@ namespace SIMSystem
                 ann_where VARCHAR(100) NOT NULL,
                 ann_when VARCHAR(100) NOT NULL,
                 emp_id VARCHAR(12),
+                ann_createdAt TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
                 PRIMARY KEY(ann_id),
                 FOREIGN KEY(emp_id) REFERENCES User(emp_id)) COLLATE='utf8_general_ci';", connection.connection);
                 createNoticeTable.ExecuteNonQuery();

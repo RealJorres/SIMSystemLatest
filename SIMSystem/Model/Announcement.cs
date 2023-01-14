@@ -13,6 +13,7 @@ namespace SIMSystem.Model
         private string where;
         private DateTime when;
         private string createdBy;
+        private DateTime createdDate;
 
         public Announcement()
         {
@@ -24,5 +25,6 @@ namespace SIMSystem.Model
         public string Where { get => where; set => where = value; }
         public DateTime When { get => when; set => when = value; }
         public string CreatedBy { get => createdBy; set => createdBy = value; }
+        public DateTime CreatedDate { get => createdDate; set => createdDate = value; }
     }
 }

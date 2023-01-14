@@ -36,6 +36,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.panel_announcementBody = new System.Windows.Forms.Panel();
+            this.panel_iFrame = new System.Windows.Forms.Panel();
             this.panelHeader.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel1.SuspendLayout();
@@ -111,16 +112,25 @@
             // 
             // panel_announcementBody
             // 
-            this.panel_announcementBody.Location = new System.Drawing.Point(14, 121);
+            this.panel_announcementBody.Font = new System.Drawing.Font("Heebo", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.panel_announcementBody.Location = new System.Drawing.Point(10, 125);
             this.panel_announcementBody.Name = "panel_announcementBody";
-            this.panel_announcementBody.Size = new System.Drawing.Size(848, 388);
+            this.panel_announcementBody.Size = new System.Drawing.Size(502, 388);
             this.panel_announcementBody.TabIndex = 6;
+            // 
+            // panel_iFrame
+            // 
+            this.panel_iFrame.Location = new System.Drawing.Point(524, 125);
+            this.panel_iFrame.Name = "panel_iFrame";
+            this.panel_iFrame.Size = new System.Drawing.Size(340, 388);
+            this.panel_iFrame.TabIndex = 7;
             // 
             // DefaultDashboard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(874, 521);
+            this.Controls.Add(this.panel_iFrame);
             this.Controls.Add(this.panel_announcementBody);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.panel1);
@@ -149,5 +159,6 @@
         private Label label1;
         private PictureBox pictureBox2;
         private Panel panel_announcementBody;
+        private Panel panel_iFrame;
     }
 }
