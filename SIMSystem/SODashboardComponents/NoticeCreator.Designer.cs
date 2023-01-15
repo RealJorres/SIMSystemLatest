@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(NoticeCreator));
             this.label1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
@@ -35,10 +36,14 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.tb_what = new System.Windows.Forms.TextBox();
+            this.tb_who = new System.Windows.Forms.TextBox();
+            this.tb_where = new System.Windows.Forms.TextBox();
+            this.dtp_when = new System.Windows.Forms.DateTimePicker();
+            this.btn_preview = new System.Windows.Forms.Button();
+            this.btn_post = new System.Windows.Forms.Button();
+            this.errorProvider = new System.Windows.Forms.ErrorProvider(this.components);
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -65,7 +70,7 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Heebo", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(36, 76);
+            this.label2.Location = new System.Drawing.Point(35, 76);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(48, 22);
             this.label2.TabIndex = 2;
@@ -76,7 +81,7 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Heebo", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(36, 112);
+            this.label3.Location = new System.Drawing.Point(35, 112);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(44, 22);
             this.label3.TabIndex = 3;
@@ -87,7 +92,7 @@
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Heebo", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(36, 148);
+            this.label4.Location = new System.Drawing.Point(35, 148);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(51, 22);
             this.label4.TabIndex = 4;
@@ -98,50 +103,92 @@
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Heebo", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label5.ForeColor = System.Drawing.Color.White;
-            this.label5.Location = new System.Drawing.Point(36, 184);
+            this.label5.Location = new System.Drawing.Point(35, 184);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(56, 22);
             this.label5.TabIndex = 5;
             this.label5.Text = "Where:";
             // 
-            // textBox1
+            // tb_what
             // 
-            this.textBox1.Location = new System.Drawing.Point(109, 73);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(282, 30);
-            this.textBox1.TabIndex = 6;
+            this.tb_what.Location = new System.Drawing.Point(108, 73);
+            this.tb_what.Name = "tb_what";
+            this.tb_what.Size = new System.Drawing.Size(282, 30);
+            this.tb_what.TabIndex = 6;
+            this.tb_what.Validating += new System.ComponentModel.CancelEventHandler(this.tb_what_Validating);
             // 
-            // textBox2
+            // tb_who
             // 
-            this.textBox2.Location = new System.Drawing.Point(109, 109);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(282, 30);
-            this.textBox2.TabIndex = 7;
+            this.tb_who.Location = new System.Drawing.Point(108, 109);
+            this.tb_who.Name = "tb_who";
+            this.tb_who.Size = new System.Drawing.Size(282, 30);
+            this.tb_who.TabIndex = 7;
+            this.tb_who.Validating += new System.ComponentModel.CancelEventHandler(this.tb_who_Validating);
             // 
-            // textBox4
+            // tb_where
             // 
-            this.textBox4.Location = new System.Drawing.Point(109, 181);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(282, 30);
-            this.textBox4.TabIndex = 9;
+            this.tb_where.Location = new System.Drawing.Point(108, 181);
+            this.tb_where.Name = "tb_where";
+            this.tb_where.Size = new System.Drawing.Size(282, 30);
+            this.tb_where.TabIndex = 9;
+            this.tb_where.Validating += new System.ComponentModel.CancelEventHandler(this.tb_where_Validating);
             // 
-            // dateTimePicker1
+            // dtp_when
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(109, 145);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(282, 30);
-            this.dateTimePicker1.TabIndex = 10;
+            this.dtp_when.Location = new System.Drawing.Point(108, 145);
+            this.dtp_when.Name = "dtp_when";
+            this.dtp_when.Size = new System.Drawing.Size(282, 30);
+            this.dtp_when.TabIndex = 10;
+            this.dtp_when.Validating += new System.ComponentModel.CancelEventHandler(this.dtp_when_Validating);
+            // 
+            // btn_preview
+            // 
+            this.btn_preview.BackColor = System.Drawing.SystemColors.HotTrack;
+            this.btn_preview.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_preview.FlatAppearance.BorderSize = 0;
+            this.btn_preview.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_preview.ForeColor = System.Drawing.Color.White;
+            this.btn_preview.Location = new System.Drawing.Point(108, 217);
+            this.btn_preview.Name = "btn_preview";
+            this.btn_preview.Size = new System.Drawing.Size(75, 31);
+            this.btn_preview.TabIndex = 11;
+            this.btn_preview.Text = "Preview";
+            this.btn_preview.UseVisualStyleBackColor = false;
+            this.btn_preview.Visible = false;
+            this.btn_preview.Click += new System.EventHandler(this.btn_preview_Click);
+            // 
+            // btn_post
+            // 
+            this.btn_post.BackColor = System.Drawing.SystemColors.HotTrack;
+            this.btn_post.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_post.FlatAppearance.BorderSize = 0;
+            this.btn_post.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_post.ForeColor = System.Drawing.Color.White;
+            this.btn_post.Location = new System.Drawing.Point(315, 217);
+            this.btn_post.Name = "btn_post";
+            this.btn_post.Size = new System.Drawing.Size(75, 31);
+            this.btn_post.TabIndex = 12;
+            this.btn_post.Text = "Post";
+            this.btn_post.UseVisualStyleBackColor = false;
+            this.btn_post.Click += new System.EventHandler(this.btn_post_Click);
+            // 
+            // errorProvider
+            // 
+            this.errorProvider.ContainerControl = this;
+            this.errorProvider.Icon = ((System.Drawing.Icon)(resources.GetObject("errorProvider.Icon")));
             // 
             // NoticeCreator
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 22F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Highlight;
-            this.ClientSize = new System.Drawing.Size(434, 311);
-            this.Controls.Add(this.dateTimePicker1);
-            this.Controls.Add(this.textBox4);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.ClientSize = new System.Drawing.Size(434, 279);
+            this.Controls.Add(this.btn_post);
+            this.Controls.Add(this.btn_preview);
+            this.Controls.Add(this.dtp_when);
+            this.Controls.Add(this.tb_where);
+            this.Controls.Add(this.tb_who);
+            this.Controls.Add(this.tb_what);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
@@ -157,6 +204,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "SIMSystem: Announcement Creator";
             this.Load += new System.EventHandler(this.NoticeCreator_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -170,9 +218,12 @@
         private Label label3;
         private Label label4;
         private Label label5;
-        private TextBox textBox1;
-        private TextBox textBox2;
-        private TextBox textBox4;
-        private DateTimePicker dateTimePicker1;
+        private TextBox tb_what;
+        private TextBox tb_who;
+        private TextBox tb_where;
+        private DateTimePicker dtp_when;
+        private Button btn_preview;
+        private Button btn_post;
+        private ErrorProvider errorProvider;
     }
 }

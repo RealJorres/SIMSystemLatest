@@ -218,7 +218,7 @@ namespace SIMSystem.Forms
 
         private void btn_createNotice_Click(object sender, EventArgs e)
         {
-            NoticeCreator noticeCreator = new NoticeCreator();
+            NoticeCreator noticeCreator = new NoticeCreator(user);
             noticeCreator.ShowDialog();
         }
     }

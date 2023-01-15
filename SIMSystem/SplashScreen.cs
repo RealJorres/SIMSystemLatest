@@ -147,7 +147,7 @@ namespace SIMSystem
                 ann_what VARCHAR(255) NOT NULL,
                 ann_who VARCHAR(100) NOT NULL,
                 ann_where VARCHAR(100) NOT NULL,
-                ann_when VARCHAR(100) NOT NULL,
+                ann_when TIMESTAMP NOT NULL,
                 emp_id VARCHAR(12),
                 ann_createdAt TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
                 PRIMARY KEY(ann_id),
