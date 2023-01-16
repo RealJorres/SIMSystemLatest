@@ -96,7 +96,6 @@ namespace SIMSystem.ManageSupply
             {
                 try
                 {
-                    MessageBox.Show(s.Unitcost.ToString());
                     s.Quantity += int.Parse(tb_supplyQuantity.Text.ToString());
                     s.Totalcost += double.Parse(tb_supplyTotalCost.Text.ToString());
                     s.Unitcost = s.Totalcost / s.Quantity;
