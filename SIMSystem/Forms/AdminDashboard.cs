@@ -138,8 +138,8 @@ namespace SIMSystem.Forms
                         supplyFromDb.Unit = reader["supply_unit"].ToString();
                         supplyFromDb.Quantity = int.Parse(reader["supply_quantity"].ToString());
                         supplyFromDb.Clevel = int.Parse(reader["supply_cLevel"].ToString());
-                        supplyFromDb.Unitcost = int.Parse(reader["supply_unitCost"].ToString());
-                        supplyFromDb.Totalcost = int.Parse(reader["supply_totalCost"].ToString());
+                        supplyFromDb.Unitcost = double.Parse(reader["supply_unitCost"].ToString());
+                        supplyFromDb.Totalcost = double.Parse(reader["supply_totalCost"].ToString());
                         supplyFromDb.Type = reader["supply_type"].ToString();
                         supplies.Add(supplyFromDb);
 
