@@ -60,6 +60,7 @@ namespace SIMSystem.Forms
                             user.Address = dataReader["emp_address"].ToString();
                             user.Email = dataReader["emp_email"].ToString();
                             user.Type = dataReader["emp_type"].ToString();
+                            user.IsOnline = bool.Parse(dataReader["emp_isOnline"].ToString());
                             if(user.Type != "Admin")
                             {
                                 user.Signature = (byte[])dataReader["emp_signature"];
@@ -76,33 +77,40 @@ namespace SIMSystem.Forms
 
                     if(user != null)
                     {
-                        if(user.Type == "Admin")
+                        if (!user.IsOnline)
                         {
-                            AdminDashboard adminDashboard = new AdminDashboard(user);
-                            adminDashboard.Show();
-                            Owner.Close();
-                            Close();
+                            if (user.Type == "Admin")
+                            {
+                                AdminDashboard adminDashboard = new AdminDashboard(user);
+                                adminDashboard.Show();
+                                Owner.Close();
+                                Close();
+                            }
+                            else if (user.Type == "Supply Officer")
+                            {
+                                SODashboard sODashboard = new SODashboard(user);
+                                sODashboard.Show();
+                                Owner.Close();
+                                Close();
+                            }
+                            else if (user.Type == "Chief Statistical Specialist")
+                            {
+                                CSSDashboard cSSDashboard = new CSSDashboard(user);
+                                cSSDashboard.Show();
+                                Owner.Close();
+                                Close();
+                            }
+                            else if (user.Type == "Regular Employee")
+                            {
+                                RegularDashboard regularDashboard = new RegularDashboard(user);
+                                regularDashboard.Show();
+                                Owner.Close();
+                                Close();
+                            }
                         }
-                        else if(user.Type == "Supply Officer")
+                        else
                         {
-                            SODashboard sODashboard = new SODashboard(user);
-                            sODashboard.Show();
-                            Owner.Close();
-                            Close();
-                        }
-                        else if(user.Type == "Chief Statistical Specialist")
-                        {
-                            CSSDashboard cSSDashboard = new CSSDashboard(user);
-                            cSSDashboard.Show();
-                            Owner.Close();
-                            Close();
-                        }
-                        else if(user.Type == "Regular Employee")
-                        {
-                            RegularDashboard regularDashboard = new RegularDashboard(user);
-                            regularDashboard.Show();
-                            Owner.Close();
-                            Close();
+                            MessageBox.Show("User is active in another session.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                         }
                     }
                 }
