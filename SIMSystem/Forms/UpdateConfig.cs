@@ -41,7 +41,8 @@ namespace SIMSystem.Forms
             string password = tb_password.Text.ToString();
 
             SettingsController settingsController = new SettingsController();
-            if(settingsController.UpdateSettings(server, database, username, password))
+
+            if (settingsController.UpdateSettings(server, database, username, password))
             {
                 MessageBox.Show("New Configuration saved.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 Dispose();
