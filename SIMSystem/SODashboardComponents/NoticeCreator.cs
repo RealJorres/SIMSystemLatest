@@ -92,7 +92,7 @@ namespace SIMSystem.SODashboardComponents
 
         private void btn_post_Click(object sender, EventArgs e)
         {
-            if (ValidateChildren(ValidationConstraints.Enabled){
+            if (ValidateChildren(ValidationConstraints.Enabled)){
                 ConnectionDB connection = new ConnectionDB();
                 if (connection.Open())
                 {
