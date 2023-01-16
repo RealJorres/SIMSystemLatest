@@ -15,13 +15,13 @@
     {
         "Entry"
         {
-        "MsmKey" = "8:_2B4441C118EA4761AF1474C9F82F082D"
+        "MsmKey" = "8:_76358A38BD964EE7A80267D6936CBD98"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
-        "MsmKey" = "8:_4A35C9A8C72F4CAEBDBBD2F14515250E"
+        "MsmKey" = "8:_991D92E4D29546FC83F14559A81A44CE"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
@@ -213,7 +213,7 @@
         "Name" = "8:Microsoft Visual Studio"
         "ProductName" = "8:SIMSystem"
         "ProductCode" = "8:{882BD023-E693-461B-B4F1-037F20DB4175}"
-        "PackageCode" = "8:{43EAD1E9-48B9-43C1-A3E8-B213CEA6A6F4}"
+        "PackageCode" = "8:{629F5F60-477F-4FBD-B4CF-813B207A5D53}"
         "UpgradeCode" = "8:{90924B08-4AC7-48CB-A7E3-FCC1DA4938BF}"
         "AspNetVersion" = "8:4.0.30319.0"
         "RestartWWWService" = "11:FALSE"
@@ -333,7 +333,7 @@
         }
         "Shortcut"
         {
-            "{970C0BB2-C7D0-45D7-ABFA-7EC378858BC0}:_898C79CDE3BA4336A8F616C96AEC85AD"
+            "{970C0BB2-C7D0-45D7-ABFA-7EC378858BC0}:_070C773D7E164D53A5DA97FD4D2FE07A"
             {
             "Name" = "8:SIMSAdminControl"
             "Arguments" = "8:"
@@ -341,13 +341,13 @@
             "ShowCmd" = "3:1"
             "IconIndex" = "3:0"
             "Transitive" = "11:FALSE"
-            "Target" = "8:_2B4441C118EA4761AF1474C9F82F082D"
+            "Target" = "8:_76358A38BD964EE7A80267D6936CBD98"
             "Folder" = "8:_C864439E2F144CE685284F5BB68EB8AB"
             "WorkingFolder" = "8:_363DC5C1CAFC479F9777F5998301FB0B"
-            "Icon" = "8:_B1322FBAA796448D9A964A2492B3CD98"
+            "Icon" = "8:"
             "Feature" = "8:"
             }
-            "{970C0BB2-C7D0-45D7-ABFA-7EC378858BC0}:_A41DD19287D3433E86AFDE2331F5F671"
+            "{970C0BB2-C7D0-45D7-ABFA-7EC378858BC0}:_44E1720139FA46E9AC958214DCC28DE0"
             {
             "Name" = "8:SIMSystem"
             "Arguments" = "8:"
@@ -355,24 +355,24 @@
             "ShowCmd" = "3:1"
             "IconIndex" = "3:0"
             "Transitive" = "11:FALSE"
-            "Target" = "8:_4A35C9A8C72F4CAEBDBBD2F14515250E"
+            "Target" = "8:_991D92E4D29546FC83F14559A81A44CE"
+            "Folder" = "8:_C864439E2F144CE685284F5BB68EB8AB"
+            "WorkingFolder" = "8:_363DC5C1CAFC479F9777F5998301FB0B"
+            "Icon" = "8:"
+            "Feature" = "8:"
+            }
+            "{970C0BB2-C7D0-45D7-ABFA-7EC378858BC0}:_AFC69B6FFF11433C84EC7D50A1B5C166"
+            {
+            "Name" = "8:SIMSystem"
+            "Arguments" = "8:"
+            "Description" = "8:"
+            "ShowCmd" = "3:1"
+            "IconIndex" = "3:0"
+            "Transitive" = "11:FALSE"
+            "Target" = "8:_991D92E4D29546FC83F14559A81A44CE"
             "Folder" = "8:_100A6225DC4D4154BEF5FDC604E915E7"
             "WorkingFolder" = "8:_363DC5C1CAFC479F9777F5998301FB0B"
-            "Icon" = "8:_B1322FBAA796448D9A964A2492B3CD98"
-            "Feature" = "8:"
-            }
-            "{970C0BB2-C7D0-45D7-ABFA-7EC378858BC0}:_C1183E6799424E7DB3CFBE2E76C7FCE5"
-            {
-            "Name" = "8:SIMSystem"
-            "Arguments" = "8:"
-            "Description" = "8:"
-            "ShowCmd" = "3:1"
-            "IconIndex" = "3:0"
-            "Transitive" = "11:FALSE"
-            "Target" = "8:_4A35C9A8C72F4CAEBDBBD2F14515250E"
-            "Folder" = "8:_C864439E2F144CE685284F5BB68EB8AB"
-            "WorkingFolder" = "8:_363DC5C1CAFC479F9777F5998301FB0B"
-            "Icon" = "8:_B1322FBAA796448D9A964A2492B3CD98"
+            "Icon" = "8:"
             "Feature" = "8:"
             }
         }
@@ -774,7 +774,7 @@
         }
         "ProjectOutput"
         {
-            "{5259A561-127C-4D43-A0A1-72F10C7B3BF8}:_2B4441C118EA4761AF1474C9F82F082D"
+            "{5259A561-127C-4D43-A0A1-72F10C7B3BF8}:_76358A38BD964EE7A80267D6936CBD98"
             {
             "SourcePath" = "8:..\\SIMSAdminControl\\obj\\Debug\\net6.0-windows\\apphost.exe"
             "TargetName" = "8:"
@@ -802,7 +802,7 @@
                 {
                 }
             }
-            "{5259A561-127C-4D43-A0A1-72F10C7B3BF8}:_4A35C9A8C72F4CAEBDBBD2F14515250E"
+            "{5259A561-127C-4D43-A0A1-72F10C7B3BF8}:_991D92E4D29546FC83F14559A81A44CE"
             {
             "SourcePath" = "8:..\\SIMSystem\\obj\\Debug\\net6.0-windows\\apphost.exe"
             "TargetName" = "8:"
